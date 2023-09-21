@@ -12,7 +12,7 @@ router.get('/callback',
     failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('http://localhost:5173');
+    res.redirect('https://hsfront.netlify.app');
   });
 
 
