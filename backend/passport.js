@@ -1,12 +1,12 @@
 const FacebookStrategy = require('passport-facebook')
 const passport = require('passport')
-
-const FACEBOOK_APP_ID='1013273196760878'
-const FACEBOOK_APP_SECRET='5c7dfe0a15f002661cf4af476a7d2a4a'
+require('dotenv').config()
+// const FACEBOOK_APP_ID='1013273196760878'
+// const FACEBOOK_APP_SECRET='5c7dfe0a15f002661cf4af476a7d2a4a'
 
 passport.use(new FacebookStrategy({
-    clientID: FACEBOOK_APP_ID,
-    clientSecret: FACEBOOK_APP_SECRET,
+    clientID: process.env.FACEBOOK_APP_ID,
+    clientSecret: process.env.FACEBOOK_APP_SECRET,
     callbackURL: "https://hs-aexb.onrender.com/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {

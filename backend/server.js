@@ -13,6 +13,7 @@ const PORT = process.env.port || 5000
 app.use(cookieSession({
     name: 'session', keys: ['session'], maxAge: 24 * 60 * 60 * 100
 }))
+
 app.use(passport.initialize())
 app.use(passport.session())
 
@@ -28,4 +29,5 @@ app.get('/', (req,res)=>{
 app.use('/auth/facebook', facebookRoute)
 app.listen(PORT, ()=> {
     console.log(`Server running on port ${PORT}`);
+    console.log(process.env.FACEBOOK_APP_ID);
 })
