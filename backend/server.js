@@ -32,7 +32,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(cors({
-    origin: 'https://hsfront.netlify.app',
+    origin: 'https://hs-front.netlify.app',
     // origin: 'http://localhost:5173',
     methods: "GET,POST,PUT,DELETE",
     credentials: true
